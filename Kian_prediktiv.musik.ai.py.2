@@ -1,0 +1,33 @@
+media =[
+  {"artist": "Yasin", "Genre": "Hip-Hop", "Ranking": "1", "Song": "Spiderman", "Mood": "Chill"},
+  {"artist": "Ant Wan", "Genre": "Hip-Hop", "Ranking": "2", "Song": "Komplicerat", "Mood": "Romantic"},
+  {"artist": "23", "Genre": "Drill", "Ranking": "3", "Song": "Lucky luciano", "Mood": "Aggressive"},
+  {"artist": "C.Gambino", "Genre": "Trap", "Ranking": "4", "Song": "Automatic", "Mood": "Chill"},
+  {"artist": "Asme", "Genre": "Hip-Hop", "Ranking": "5", "Song": "Gas", "Mood": "The best"},
+  {"artist": "Dizzy", "Genre": "Swedish Hip-Hop", "Ranking": "6", "Song": "The wire", "Mood": "Vibey"},
+  {"artist": "Dree Low", "Genre": "Hip-Hop", "Ranking": "7", "Song": "Pippi", "Mood": "Catchy"},
+  {"artist": "Saretti", "Genre": "Hip-Hop", "Ranking": "8", "Song": "Som dom", "Mood": "Vibey"},
+  {"artist": "Shiro", "Genre": "Drill", "Ranking": "9", "Song": "Blind", "Mood": "Energetic"},
+  {"artist": "Gaboro", "Genre": "Hip-Hop", "Ranking": "10", "Song": "SUAVEMENTE", "Mood": "Aggressive"}
+]
+
+genre = input(" What genre do you enjoy? ")
+mood = input(" What type of mood do you want?\n(street, ")
+
+best_score = 0
+best_song = ""
+
+for song in media:
+    score = 0
+
+    if song["genre"] == genre:
+        score += 2
+
+    if song["mood"] == mood:
+        score += 1
+
+    if score > best_score:
+        best_score = score
+        best_song = song["PopularSong"]
+
+print("We recommend you listen to:", best_song)
